@@ -1,0 +1,16 @@
+// Leetcode 69: sqrt(x)
+// problem link : https://leetcode.com/problems/sqrtx/description/
+
+
+class Solution {
+    public int mySqrt(int x) {
+        if (x == 0) return 0;
+
+        long r = x;
+        while (r * r > x) {
+            r = (r + x / r) / 2;
+        }
+        return (int) r;
+    }
+}
+

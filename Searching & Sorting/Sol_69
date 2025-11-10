@@ -1,6 +1,6 @@
 // Leetcode 69: sqrt(x)
 // problem link : https://leetcode.com/problems/sqrtx/description/
-
+// solution
 
 class Solution {
     public int mySqrt(int x) {

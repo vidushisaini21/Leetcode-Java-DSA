@@ -1,1 +1,26 @@
+// leetcode 1704 : Determine if String Halves Are Alike
+// problem link : https://leetcode.com/problems/determine-if-string-halves-are-alike/description/
+// solution :
 
+class Solution {
+    public boolean halvesAreAlike(String s) {
+        int n = s.length();
+        int mid = n/2;
+        String first = s.substring(0, mid);
+        String second = s.substring(mid, n);
+        return countvowel(first)==countvowel(second);
+
+    }
+
+            private int countvowel(String str){
+            int count=0;
+            String vowels = "aeiouAEIOU";
+            for(char c : str.toCharArray()){
+                if(vowels.indexOf(c) != -1){
+                    count++;
+                }
+            }
+            return count;
+
+        }
+}
